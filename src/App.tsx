@@ -9,12 +9,12 @@ import AmortizationTable from './components/AmortizationTable';
 function App() {
   const [inputs, setInputs] = React.useState<MortgageInputs>({
     homePrice: 500000,
-    downPayment: 20,
-    downPaymentIsPercent: true,
+    downPayment: 100000,
+    downPaymentIsPercent: false,
     loanTermYears: 30,
     annualInterestRate: 6.5,
-    propertyTaxAnnual: 1.1,
-    propertyTaxIsPercent: true,
+    propertyTaxAnnual: 6000,
+    propertyTaxIsPercent: false,
     homeInsuranceAnnual: 1200,
     includeHOA: true,
     hoaMonthly: 150,
