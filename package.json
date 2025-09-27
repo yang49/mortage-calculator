@@ -1,8 +1,8 @@
 {
-  "name": "mortage-calculator",
+  "name": "mortgage-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yang49.github.io/mortage-calculator",
+  "homepage": "https://yang49.github.io/mortgage-calculator",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",

@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description"
+    content="Free mortgage calculator with instant payments, total costs, amortization schedule, and affordability guidance. Estimate your monthly mortgage and see remaining principal over time." />
+  <meta name="keywords"
+    content="mortgage calculator, home loan calculator, amortization schedule, mortgage payment, affordability, DTI" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yang49.github.io/mortgage-calculator/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mortgage Calculator" />
+  <meta property="og:description"
+    content="Calculate mortgage payments instantly. See P&I, taxes, insurance, HOA, total costs, amortization, and affordability guidance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yang49.github.io/mortgage-calculator/" />
+  <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+  <meta property="og:site_name" content="Mortgage Calculator" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mortgage Calculator" />
+  <meta name="twitter:description" content="Free mortgage calculator with instant results and amortization." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <meta name="google-site-verification" content="JnpZYK45nVRZ9QYrSU_YYi3iMJtPCEJpx4JYNEBNK48" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,20 +46,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!-- JSON-LD Structured Data (moved to end for optimization) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Mortgage Calculator",
+      "url": "https://yang49.github.io/mortgage-calculator/",
+      "description": "Free mortgage calculator with instant payments, total costs, amortization schedule, and affordability guidance.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mortgage Calculator"
+      }
+    }
+    </script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- Google tag (gtag.js) - GA4 (moved to end) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0SE4SDPRW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K0SE4SDPRW', { send_page_view: true });
+  </script>
+  <!-- CRA will inject the bundled app scripts here during build -->
+</body>
+
 </html>
