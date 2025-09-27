@@ -4,6 +4,7 @@ interface MoneyInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElemen
   value: number | undefined;
   onChange: (value: number) => void;
   allowDecimals?: boolean;
+  onCommit?: (value: number) => void; // fired on blur with finalized numeric value
 }
 
 function formatNumberString(n: number, allowDecimals: boolean) {
@@ -16,7 +17,7 @@ function formatNumberString(n: number, allowDecimals: boolean) {
   return Math.floor(Math.abs(n)).toLocaleString();
 }
 
-export default function MoneyInput({ value, onChange, allowDecimals = true, onBlur, ...rest }: MoneyInputProps) {
+export default function MoneyInput({ value, onChange, allowDecimals = true, onBlur, onCommit, ...rest }: MoneyInputProps) {
   const [text, setText] = React.useState<string>(value != null ? formatNumberString(value, allowDecimals) : '');
 
   React.useEffect(() => {
@@ -39,7 +40,9 @@ export default function MoneyInput({ value, onChange, allowDecimals = true, onBl
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     const num = Number(text.replace(/,/g, ''));
-    setText(Number.isFinite(num) ? formatNumberString(num, allowDecimals) : '');
+    const safeNum = Number.isFinite(num) ? num : 0;
+    setText(Number.isFinite(num) ? formatNumberString(safeNum, allowDecimals) : '');
+    onCommit?.(safeNum);
     onBlur?.(e);
   };
 
