@@ -3,4 +3,4 @@ User-agent: *
 Disallow:
 
 # Sitemap location
-Sitemap: https://yang49.github.io/mortage-calculator/sitemap.xml
+Sitemap: https://yang49.github.io/mortgage-calculator/sitemap.xml
