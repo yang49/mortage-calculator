@@ -2,8 +2,9 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders mortgage calculator heading and sections', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /mortgage calculator/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /mortgage inputs/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /results/i })).toBeInTheDocument();
 });
